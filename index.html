@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Tiya ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================================================= */
+        /* RESET */
+        /* ================================================= */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0c0918;
+            color: white;
+            overflow: hidden;
+            height: 100vh;
+        }
+        /* ================================================= */
+        /* COMMON */
+        /* ================================================= */
+        
+        .page {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .8s;
+            overflow: hidden;
+        }
+        
+        .hide {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(1.05);
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .45);
+        }
+        
+        button {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 35px;
+            background: #ff5fa2;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            transition: .35s;
+        }
+        
+        button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 20px #ff5fa2;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 15px;
+            outline: none;
+            font-size: 18px;
+        }
+        /* ================================================= */
+        /* BACKGROUND */
+        /* ================================================= */
+        
+        body::before {
+            content: "";
+            position: fixed;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, #ff8bc240 0%, transparent 20%), radial-gradient(circle at 70% 30%, #9b8cff40 0%, transparent 20%), radial-gradient(circle at 50% 80%, #ffffff15 0%, transparent 15%);
+            animation: bgRotate 30s linear infinite;
+            z-index: -3;
+        }
+        
+        @keyframes bgRotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        #particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -2;
+        }
+        
+        .dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: white;
+            opacity: .5;
+            animation: float linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-120vh);
+                opacity: 0;
+            }
+        }
+        /* ================================================= */
+        /* LOGIN */
+        /* ================================================= */
+        
+        #login {
+            background: linear-gradient(rgba(10, 10, 20, .55), rgba(10, 10, 20, .55)), url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .login-card {
+            width: 90%;
+            max-width: 420px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .lock {
+            font-size: 70px;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+        
+        .login-card h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 55px;
+            color: #ffd7ea;
+            margin-bottom: 10px;
+        }
+        
+        .login-card p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        #error {
+            color: #ffb4c8;
+            height: 25px;
+        }
+        /* ================================================= */
+        /* LOADING */
+        /* ================================================= */
+        
+        #loading {
+            background: linear-gradient(135deg, #120d24, #06050c);
+        }
+        
+        .loading-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 55px;
+            color: #ffd7ea;
+            margin-bottom: 20px;
+        }
+        
+        .loading-text {
+            margin-bottom: 25px;
+        }
+        
+        .loader {
+            width: 280px;
+            height: 10px;
+            background: rgba(255, 255, 255, .15);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .loader span {
+            display: block;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #ff5fa2, #ffb5d3);
+        }
+        /* ================================================= */
+        /* BIRTHDAY */
+        /* ================================================= */
+        
+        #birthday {
+            background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url("collage.jpg");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        
+        .birthday-card {
+            width: 90%;
+            max-width: 750px;
+            padding: 35px;
+        }
+        
+        .birthday-card h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 80px;
+            color: #ffd7ea;
+        }
+        
+        .birthday-card h2 {
+            font-size: 42px;
+            margin: 20px 0;
+        }
+        
+        .birthday-card p {
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+        /* ================================================= */
+        /* MUSIC BUTTON */
+        /* ================================================= */
+        
+        .music-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background: rgba(255, 255, 255, .12);
+            backdrop-filter: blur(15px);
+            z-index: 999;
+        }
+        /* ================================================= */
+        /* HEARTS */
+        /* ================================================= */
+        
+        .heart {
+            position: absolute;
+            font-size: 18px;
+            animation: rise linear infinite;
+            opacity: .8;
+        }
+        
+        @keyframes rise {
+            0% {
+                transform: translateY(100vh) scale(.6);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-120vh) scale(1.3);
+                opacity: 0;
+            }
+        }
+        /* ================================================= */
+        /* SPECIAL GIFTS */
+        /* ================================================= */
+        
+        .gift-card {
+            width: 90%;
+            max-width: 900px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .gift-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 35px;
+        }
+        
+        .gift-box {
+            width: 110px;
+            height: 110px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, .18);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: .4s;
+            font-size: 55px;
+        }
+        
+        .gift-box span {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        
+        .gift-box:hover {
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 0 25px rgba(255, 255, 255, .4);
+        }
+        
+        .hidden-message {
+            margin-top: 30px;
+            font-size: 20px;
+            min-height: 60px;
+            opacity: 0;
+            transition: .4s;
+        }
+        
+        .hidden-message.show {
+            opacity: 1;
+        }
+        /* ================================================= */
+        /* VOICE RECORDINGS */
+        /* ================================================= */
+        
+        .record-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-top: 25px;
+        }
+        
+        .voice-card {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 18px;
+            padding: 18px;
+        }
+        
+        .voice-card h3 {
+            margin-bottom: 10px;
+        }
+        
+        audio {
+            width: 100%;
+        }
+        /* ================================================= */
+        /* FAMILY PAGE */
+        /* ================================================= */
+        
+        .family-card {
+            width: 90%;
+            max-width: 850px;
+            padding: 40px;
+            text-align: center;
+            animation: familyAppear .8s ease;
+        }
+        
+        .family-card h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        .family-subtitle {
+            font-size: 18px;
+            opacity: .9;
+            margin-bottom: 35px;
+        }
+        
+        .people-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .people-buttons button {
+            background: rgba(255, 255, 255, .18);
+            border: 1px solid rgba(255, 255, 255, .2);
+        }
+        
+        .people-buttons button:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, .3);
+        }
+        
+        @keyframes familyAppear {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* ================================================= */
+        /* LETTER PAGE */
+        /* ================================================= */
+        
+        .letter-card {
+            width: 90%;
+            max-width: 700px;
+            padding: 40px;
+            text-align: center;
+        }
+        /* ENVELOPE */
+        
+        #envelope {
+            width: 220px;
+            height: 150px;
+            margin: 30px auto;
+            position: relative;
+            cursor: pointer;
+            perspective: 800px;
+        }
+        
+        .envelope-body {
+            width: 220px;
+            height: 140px;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, .2);
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            font-size: 65px;
+            transition: .8s;
+        }
+        
+        .envelope-top {
+            width: 0;
+            height: 0;
+            border-left: 110px solid transparent;
+            border-right: 110px solid transparent;
+            border-bottom: 75px solid rgba(255, 255, 255, .3);
+            position: absolute;
+            top: 0;
+            transform-origin: top;
+            transition: .8s;
+        }
+        
+        #envelope.open .envelope-top {
+            transform: rotateX(180deg);
+        }
+        
+        #envelope.open .envelope-body {
+            transform: translateY(50px);
+        }
+        /* LETTER */
+        
+        #letterContent {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, .15);
+            border-radius: 20px;
+            padding: 25px;
+            animation: letterAppear .8s ease;
+        }
+        
+        @keyframes letterAppear {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* ================================================= */
+        /* GIFT ROOM */
+        /* ================================================= */
+        
+        .gift-room-card {
+            width: 90%;
+            max-width: 900px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .gift-room {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 35px 0;
+        }
+        
+        .promise-gift {
+            width: 110px;
+            height: 110px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, .2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 55px;
+            transition: .4s;
+        }
+        
+        .promise-gift span {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+        
+        .promise-gift:hover {
+            transform: translateY(-10px) scale(1.08);
+            box-shadow: 0 0 25px rgba(255, 255, 255, .45);
+        }
+        /* SHAKE */
+        
+        .promise-gift.opening {
+            animation: giftShake .7s ease;
+        }
+        
+        @keyframes giftShake {
+            0% {
+                transform: rotate(0);
+            }
+            20% {
+                transform: rotate(-15deg);
+            }
+            40% {
+                transform: rotate(15deg);
+            }
+            60% {
+                transform: rotate(-10deg);
+            }
+            100% {
+                transform: rotate(0);
+            }
+        }
+        /* PROMISE CARD */
+        
+        #promiseCard {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 25px;
+            background: rgba(255, 255, 255, .18);
+            border-radius: 20px;
+            min-height: 70px;
+            font-size: 20px;
+            animation: promiseShow .5s ease;
+        }
+        
+        @keyframes promiseShow {
+            from {
+                opacity: 0;
+                transform: scale(.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        /* ================================================= */
+        /* BLESSINGS PAGE */
+        /* ================================================= */
+        
+        .blessings-card {
+            width: 90%;
+            max-width: 900px;
+            padding: 40px;
+            text-align: center;
+            overflow: hidden;
+            animation: blessingPageIn .8s ease;
+        }
+        
+        .blessing-text {
+            font-size: 20px;
+            line-height: 1.8;
+            margin: 25px 0;
+        }
+        
+        .blessings-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-top: 35px;
+        }
+        
+        .blessing {
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, .18);
+            transition: .35s;
+            animation: blessingAppear .8s ease;
+        }
+        
+        .blessing:nth-child(2) {
+            animation-delay: .2s;
+        }
+        
+        .blessing:nth-child(3) {
+            animation-delay: .4s;
+        }
+        
+        .blessing:nth-child(4) {
+            animation-delay: .6s;
+        }
+        
+        .blessing:hover {
+            transform: scale(1.03);
+            background: rgba(255, 255, 255, .28);
+        }
+        
+        @keyframes blessingAppear {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes blessingPageIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* ================================================= */
+        /* FLOATING PETALS */
+        /* ================================================= */
+        
+        .petal {
+            position: fixed;
+            top: -30px;
+            font-size: 24px;
+            pointer-events: none;
+            animation: fallPetal linear infinite;
+            filter: drop-shadow(0 0 8px rgba(255, 255, 255, .7));
+        }
+        
+        @keyframes fallPetal {
+            from {
+                transform: translateY(-50px) rotate(0deg);
+            }
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+        /* ================================================= */
+        /* GRAND FINALE */
+        /* ================================================= */
+        
+        .finale-card {
+            width: 90%;
+            max-width: 850px;
+            padding: 45px;
+            text-align: center;
+            animation: finalFade 1s ease;
+        }
+        
+        .finale-card h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 70px;
+            margin-bottom: 20px;
+            color: #ffd7ea;
+        }
+        
+        .finale-card h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+        
+        .finale-card p {
+            line-height: 1.9;
+            font-size: 19px;
+            margin-bottom: 35px;
+        }
+        /* ================================================= */
+        /* FIREWORKS */
+        /* ================================================= */
+        
+        #fireworks {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 50;
+        }
+        
+        .firework {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+            animation: explode 1.2s ease forwards;
+        }
+        
+        @keyframes explode {
+            from {
+                transform: scale(0);
+                opacity: 1;
+            }
+            to {
+                transform: scale(15);
+                opacity: 0;
+            }
+        }
+        /* ================================================= */
+        /* CONFETTI */
+        /* ================================================= */
+        
+        #confetti {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 60;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 18px;
+            border-radius: 4px;
+            animation: confettiFall linear forwards;
+        }
+        
+        @keyframes confettiFall {
+            from {
+                transform: translateY(-20px) rotate(0deg);
+            }
+            to {
+                transform: translateY(110vh) rotate(720deg);
+            }
+        }
+        /* ================================================= */
+        /* PAGE FADE */
+        /* ================================================= */
+        
+        .page {
+            opacity: 1;
+        }
+        
+        .page.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+        /* ================================================= */
+        /* MOBILE */
+        /* ================================================= */
+        
+        @media(max-width:768px) {
+            .login-card,
+            .birthday-card,
+            .gift-card,
+            .family-card,
+            .letter-card,
+            .gift-room-card,
+            .blessings-card,
+            .finale-card {
+                width: 94%;
+                padding: 25px;
+            }
+            .login-card h1 {
+                font-size: 42px;
+            }
+            .loading-title {
+                font-size: 42px;
+            }
+            .birthday-card h1 {
+                font-size: 55px;
+            }
+            .birthday-card h2 {
+                font-size: 30px;
+            }
+            .finale-card h1 {
+                font-size: 48px;
+            }
+            .people-buttons {
+                flex-direction: column;
+            }
+            .people-buttons button {
+                width: 100%;
+            }
+            .gift-container,
+            .gift-room {
+                gap: 15px;
+            }
+            .gift-box,
+            .promise-gift {
+                width: 90px;
+                height: 90px;
+                font-size: 42px;
+            }
+            button {
+                width: 100%;
+            }
+        }
+        /* ================================================= */
+        /* SMALL POLISH */
+        /* ================================================= */
+        
+        button:active {
+            transform: scale(.97);
+        }
+        
+        audio {
+            border-radius: 12px;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: #ff7eb7;
+            border-radius: 10px;
+        }
+        
+         ::selection {
+            background: #ff7eb7;
+            color: white;
+        }
+        
+        body {
+            user-select: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- PARTICLES -->
+    <div id="particles"></div>
+
+    <!-- HEARTS -->
+    <div id="hearts"></div>
+
+    <!-- FIREWORKS -->
+    <div id="fireworks"></div>
+
+    <!-- CONFETTI -->
+    <div id="confetti"></div>
+
+
+    <!-- MUSIC -->
+
+    <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+    <div class="music-btn" onclick="toggleMusic()">
+        🎵
+    </div>
+
+
+    <!-- ================================================= -->
+    <!-- LOGIN PAGE -->
+    <!-- ================================================= -->
+
+    <section id="login" class="page">
+
+        <div class="glass login-card">
+
+            <div class="lock">
+                🔒
+            </div>
+
+            <h1>
+                A Small Secret
+            </h1>
+
+            <p>
+
+                This little world was created only for one special person.
+
+                <br><br> Enter the password to begin your journey.
+
+            </p>
+
+            <input id="password" type="password" placeholder="Enter Password">
+
+            <button onclick="checkPassword()">
+
+            Unlock ❤️
+
+        </button>
+
+            <div id="error"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- LOADING PAGE -->
+    <!-- ================================================= -->
+
+    <section id="loading" class="page hide">
+
+        <div class="glass login-card">
+
+            <div class="loading-title">
+
+                Welcome Tiya ❤️
+
+            </div>
+
+            <div class="loading-text">
+
+                Preparing your memories...
+
+            </div>
+
+            <div class="loader">
+
+                <span id="progress"></span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- BIRTHDAY PAGE -->
+    <!-- ================================================= -->
+
+    <section id="birthday" class="page hide">
+
+        <div class="glass birthday-card">
+
+            <h1>
+
+                Happy Birthday
+
+            </h1>
+
+            <h2>
+
+                Tiya ❤️
+
+            </h2>
+
+            <p id="birthdayText">
+
+                Happy Birthday, Tiya! ❤️ Today is all about celebrating the wonderful person you are. I hope this year brings you endless happiness, good health, success, and countless reasons to smile. Thank you for being such an important part of my life and for filling
+                so many ordinary days with laughter, kindness, and unforgettable memories. Every moment we've shared has become a memory I'll always cherish, and I'm truly grateful for our bond. You deserve all the love, joy, and blessings this world
+                has to offer. May every dream you hold close to your heart come true, and may every new day bring you closer to the life you wish for. Keep smiling, keep shining, and never stop being the amazing person you are. This little website is
+                just a small way of reminding you how special you are. I hope it brings a smile to your face and makes your birthday even more memorable. Wishing you the happiest birthday once again. Have an incredible day—you deserve nothing less! 🎂💖✨
+
+            </p>
+
+            <button id="giftBtn">
+
+            🎁 Special Gifts
+
+        </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- SPECIAL GIFTS -->
+    <!-- ================================================= -->
+
+    <section id="giftsPage" class="page hide">
+
+        <div class="glass gift-card">
+
+            <h1>
+
+                🎁 Special Gifts For You 🎁
+
+            </h1>
+
+            <p>
+
+                Some little surprises made with lots of love 💖
+
+            </p>
+
+            <div class="gift-container">
+
+                <div class="gift-box" onclick="openGift(1)">
+
+                    🎁
+
+                    <span>
+
+                    Gift 1
+
+                </span>
+
+                </div>
+
+                <div class="gift-box" onclick="openGift(2)">
+
+                    🎁
+
+                    <span>
+
+                    Gift 2
+
+                </span>
+
+                </div>
+
+                <div class="gift-box" onclick="openGift(3)">
+
+                    🎁
+
+                    <span>
+
+                    Gift 3
+
+                </span>
+
+                </div>
+
+                <div class="gift-box" onclick="openGift(4)">
+
+                    🎁
+
+                    <span>
+
+                    Gift 4
+
+                </span>
+
+                </div>
+
+                <div class="gift-box" onclick="openGift(5)">
+
+                    🎁
+
+                    <span>
+
+                    Gift 5
+
+                </span>
+
+                </div>
+
+            </div>
+
+            <div id="giftMessage" class="hidden-message">
+
+            </div>
+
+            <button id="recordingsBtn">
+
+            Continue 💕
+
+        </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- VOICE RECORDINGS PAGE -->
+    <!-- ================================================= -->
+
+    <section id="recordings" class="page hide">
+
+        <div class="glass birthday-card">
+
+            <h1>🎙</h1>
+
+            <h2>Voice Messages</h2>
+
+            <p>
+
+                Some feelings are better heard than read. Every recording here was made with love. ❤️
+
+            </p>
+
+            <div class="record-list">
+
+                <div class="voice-card">
+
+                    <h3>🎧 Recording 1</h3>
+
+                    <audio controls>
+
+                    <source src="recordings1.mp3" type="audio/mpeg">
+
+                </audio>
+
+                </div>
+
+
+                <div class="voice-card">
+
+                    <h3>🎧 Recording 2</h3>
+
+                    <audio controls>
+
+                    <source src="recordings2.mp3" type="audio/mpeg">
+
+                </audio>
+
+                </div>
+
+
+                <div class="voice-card">
+
+                    <h3>🎧 Recording 3</h3>
+
+                    <audio controls>
+
+                    <source src="recordings3.m4a" type="audio/mpeg">
+
+                </audio>
+
+                </div>
+
+
+            </div>
+
+            <br>
+
+            <button id="journeyBtn">
+
+            ✨ Let's See How This Journey Was
+
+        </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- FROM STRANGERS TO FAMILY -->
+    <!-- ================================================= -->
+
+    <section id="familyPage" class="page hide">
+
+        <div class="glass family-card">
+
+            <h1>
+
+                ❤️ From Strangers To Family ❤️
+
+            </h1>
+
+            <p class="family-subtitle">
+
+                Some people enter our lives as strangers... and slowly become family.
+
+            </p>
+
+            <div class="people-buttons">
+
+                <button onclick="openLetter('person1')">
+
+                Pranav💕
+
+            </button>
+
+                <button onclick="openLetter('person2')">
+
+                Fizan🌸
+
+            </button>
+
+                <button onclick="openLetter('person3')">
+
+                Kavya✨
+
+            </button>
+
+                <button onclick="openLetter('person4')">
+
+                Anjali💖
+
+            </button>
+
+                <button onclick="openLetter('person5')">
+
+                Aditya🌷
+
+            </button>
+
+                <button onclick="openLetter('person6')">
+
+                Tivisha🌷
+
+            </button>
+
+            </div>
+
+            <br><br>
+
+            <button onclick="nextSection('giftRoomPage')">
+    Continue To Gift Room 🎁
+</button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- LETTER VIEWER -->
+    <!-- ================================================= -->
+
+    <section id="letterPage" class="page hide">
+
+        <div class="glass letter-card">
+
+            <div id="envelope" onclick="openEnvelope()">
+
+                <div class="envelope-top"></div>
+
+                <div class="envelope-body">
+
+                    💌
+
+                </div>
+
+            </div>
+
+            <div id="letterContent">
+
+                <h1 id="letterTitle">
+
+                    A Special Letter 💖
+
+                </h1>
+
+                <p id="letterText">
+
+                    Click the envelope to open your letter ✨
+
+                </p>
+
+            </div>
+
+            <br>
+
+            <button onclick="backToFamily()">
+
+            ← Back
+
+        </button>
+
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- GIFT ROOM -->
+    <!-- ================================================= -->
+
+    <section id="giftRoomPage" class="page hide">
+
+        <div class="glass gift-room-card">
+
+            <h1>
+
+                🎁 A Little Gift Room 🎁
+
+            </h1>
+
+            <p>
+
+                Open these little surprises made especially for you 💖
+
+            </p>
+
+            <div class="gift-room">
+
+                <div class="promise-gift" onclick="openPromise(1)">
+                    🎁
+                    <span>Gift 1</span>
+                </div>
+
+                <div class="promise-gift" onclick="openPromise(2)">
+                    🎁
+                    <span>Gift 2</span>
+                </div>
+
+                <div class="promise-gift" onclick="openPromise(3)">
+                    🎁
+                    <span>Gift 3</span>
+                </div>
+
+                <div class="promise-gift" onclick="openPromise(4)">
+                    🎁
+                    <span>Gift 4</span>
+                </div>
+
+                <div class="promise-gift" onclick="openPromise(5)">
+                    🎁
+                    <span>Gift 5</span>
+                </div>
+
+            </div>
+
+            <div id="promiseCard">
+
+                Click a gift to reveal a promise 💌
+
+            </div>
+
+            <button onclick="nextSection('blessingsPage')">
+
+            Continue 🌸
+
+        </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- BLESSINGS PAGE -->
+    <!-- ================================================= -->
+
+    <section id="blessingsPage" class="page hide">
+
+        <div class="glass blessings-card">
+
+            <h1>
+                🌸 Little Blessings For You 🌸
+            </h1>
+
+            <p class="blessing-text">
+
+                May your life always be filled with happiness, endless smiles, unforgettable memories and people who truly care about you. ❤️
+
+            </p>
+
+            <div class="blessings-list">
+
+                <div class="blessing">
+
+                    🌷 May every morning bring you hope.
+
+                </div>
+
+                <div class="blessing">
+
+                    ⭐ May every dream become reality.
+
+                </div>
+
+                <div class="blessing">
+
+                    💖 May your heart always stay happy.
+
+                </div>
+
+                <div class="blessing">
+
+                    🌸 May your smile never fade.
+
+                </div>
+
+            </div>
+
+            <button onclick="nextSection('finalePage')">
+
+            Continue To Finale 🎆
+
+        </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- GRAND FINALE -->
+    <!-- ================================================= -->
+
+    <section id="finalePage" class="page hide">
+
+        <div class="glass finale-card">
+
+            <h1>
+
+                🎉 Happy Birthday Once Again 🎉
+
+            </h1>
+
+            <h2>
+
+                Tiya ❤️
+
+            </h2>
+
+            <p>
+
+                Thank you for taking this little journey.
+
+                <br><br> I hope this website made you smile, even if just for a little while.
+
+                <br><br> You deserve all the happiness, love and success in the world.
+
+                <br><br> 🌸 Stay happy. 🌸 Keep smiling. 🌸 Keep being yourself.
+
+            </p>
+
+            <button onclick="restartJourney()">
+
+            🔄 Replay Journey
+
+        </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================================= -->
+
+    <script>
+        // =================================================
+        // SETTINGS
+        // =================================================
+
+        const PASSWORD = "tiya";
+
+        const music = document.getElementById("bgMusic");
+
+        const birthdayText = document.getElementById("birthdayText");
+
+        let originalMessage = birthdayText.innerHTML;
+
+        birthdayText.innerHTML = "";
+
+
+
+        // =================================================
+        // NAVIGATION
+        // =================================================
+
+        function nextSection(id) {
+
+            document.querySelectorAll(".page").forEach(page => {
+
+                page.classList.add("hide");
+
+            });
+
+            document.getElementById(id).classList.remove("hide");
+
+        }
+
+        function backToFamily() {
+
+            nextSection("familyPage");
+
+        }
+
+
+
+        // =================================================
+        // PASSWORD
+        // =================================================
+
+        function checkPassword() {
+
+            const value =
+                document.getElementById("password")
+                .value
+                .trim();
+
+            if (value === PASSWORD) {
+
+                document.getElementById("error").innerHTML = "";
+
+                nextSection("loading");
+
+                document.getElementById("progress").style.width = "100%";
+
+                music.play().catch(() => {});
+
+                setTimeout(showBirthday, 3000);
+
+            } else {
+
+                document.getElementById("error").innerHTML = "Wrong Password ❤️";
+
+            }
+
+        }
+
+
+
+        // =================================================
+        // SHOW BIRTHDAY
+        // =================================================
+
+        function showBirthday() {
+
+            nextSection("birthday");
+
+            typeWriter();
+
+        }
+
+
+
+        // =================================================
+        // TYPEWRITER
+        // =================================================
+
+        let index = 0;
+
+        function typeWriter() {
+
+            birthdayText.innerHTML = "";
+
+            index = 0;
+
+            function write() {
+
+                if (index < originalMessage.length) {
+
+                    birthdayText.innerHTML += originalMessage.charAt(index);
+
+                    index++;
+
+                    setTimeout(write, 35);
+
+                }
+
+            }
+
+            write();
+
+        }
+
+
+
+        // =================================================
+        // MUSIC
+        // =================================================
+
+        function toggleMusic() {
+
+            if (music.paused) {
+
+                music.play();
+
+            } else {
+
+                music.pause();
+
+            }
+
+        }
+
+
+
+        // =================================================
+        // BUTTON CONNECTIONS
+        // =================================================
+
+        document.getElementById("giftBtn").onclick = function() {
+
+            nextSection("giftsPage");
+
+        };
+
+        document.getElementById("recordingsBtn").onclick = function() {
+
+            nextSection("recordings");
+
+        };
+
+        document.getElementById("journeyBtn").onclick = function() {
+
+            nextSection("familyPage");
+
+        };
+
+
+
+        // =================================================
+        // PARTICLES
+        // =================================================
+
+        const particleBox = document.getElementById("particles");
+
+        for (let i = 0; i < 120; i++) {
+
+            const dot = document.createElement("div");
+
+            dot.className = "dot";
+
+            dot.style.left = Math.random() * 100 + "%";
+
+            dot.style.animationDuration =
+                (6 + Math.random() * 8) + "s";
+
+            dot.style.animationDelay =
+                Math.random() * 8 + "s";
+
+            particleBox.appendChild(dot);
+
+        }
+
+
+
+        // =================================================
+        // HEARTS
+        // =================================================
+
+        const heartBox = document.getElementById("hearts");
+
+        const emojis = ["💖", "💕", "🌸", "✨"];
+
+        setInterval(() => {
+
+            const heart = document.createElement("div");
+
+            heart.className = "heart";
+
+            heart.innerHTML =
+                emojis[Math.floor(Math.random() * emojis.length)];
+
+            heart.style.left = Math.random() * 100 + "%";
+
+            heart.style.animationDuration =
+                (5 + Math.random() * 5) + "s";
+
+            heartBox.appendChild(heart);
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            }, 10000);
+
+        }, 500);
+
+        // =================================================
+        // SPECIAL GIFTS
+        // =================================================
+
+        function openGift(number) {
+
+            const messages = {
+
+                1: "💌 A small reminder: You are truly special.",
+
+                2: "🌸 Your smile makes ordinary moments beautiful.",
+
+                3: "✨ Thank you for becoming such an important part of our journey.",
+
+                4: "🫶 Every memory with you is worth keeping forever.",
+
+                5: "🎀 This gift is just a symbol of how much you mean."
+
+            };
+
+            const message = document.getElementById("giftMessage");
+
+            message.innerHTML = messages[number];
+
+            message.classList.add("show");
+
+        }
+
+
+
+        // =================================================
+        // LETTER SYSTEM
+        // =================================================
+
+        let currentPerson = "";
+
+        function openLetter(person) {
+
+            currentPerson = person;
+
+            nextSection("letterPage");
+
+            document.getElementById("envelope").classList.remove("open");
+
+            document.getElementById("letterTitle").innerHTML = "A Special Letter 💖";
+
+            document.getElementById("letterText").innerHTML =
+
+                "Click the envelope to open your letter ✨";
+
+        }
+
+
+
+        // =================================================
+        // ENVELOPE
+        // =================================================
+
+        function openEnvelope() {
+
+            const envelope = document.getElementById("envelope");
+
+            envelope.classList.add("open");
+
+            const messages = {
+
+                person1: `Happy birthday meriiii behnaaa 💗✨✨
+                Bappa bless you..✨
+                Teri har wish puri ho..😸
+
+                Hame milke 5 - 6 months hogyee pata nahi chala tu ab itni khaas hogyii h ham ek random gc mei milie the ek ajnabi ki tarh👀 muje wo din yaad hai jab hamne first ' time baat ki thi tab tu bht nonchalant type bandi lag rhi thi 🥀
+                Lag raha tha ye toh badi chulbuli ladki h par tere sath baat karke pata chala tu kitni aachi h😭💗..
+                Tune bht help ki h yarr Meri muje hamesha support kiya h tune..
+                Jab mei sad tha tab tu thi mere sath.
+                Thank so much yarr tune mere liye bhut kuch kiya h😭🩷..
+                Aur bhale he tu meri sagi bhen nahi h but usse jada h mere liye tuuu🩷..
+                Tu bht achiii h yarrr mei chhata hu tuje har wo achi chiz mile jo tu deserve Karti haii😸
+                Aur yarr mere bhen bane ke liye thank uh tu mere liye bhut khaas h✨🩷
+                Tune mera bhut sath diyaa h jabhi muje teri jarurat thi tune mera sath diya..😭🩷
+                Aur tu bhut backchod ladki h par usee kahi jada sweet haii😝
+                Hamne ghanto baat ki h phone pe kuch bate serious thi aur baki time toh sirf bakchodi🥀😭.
+                Tu galiya deti h bht aur muje toh har samai pel deti h😭🥀 par muje bura nahi lagta kyuki muje pata h tu kitni achhi hh..
+                Next life mei meri sagi bhen banke aana hai tujhee fir Tera har b day ham sath mei celebrate karenge🥳
+                Tere sath bhut sari memorise h aur wo bht achii h jo bhul nahi sakte.
+                Thank uh meri life ka part banne ke liye🌷
+                Aaj wahi din hai jis din Ek diva ne janam liya tha😭
+
+                Tu itni chhoti Umar mei bht jada talented aur mature haii kuch jada he smart h un sab chizo mei👽
+                Par achaa h lesbian sahi hai toh meri bhen he naa😸🥀..
+
+                Enjoy your Day aur haa tu ham sabke liye bhut special haii toh khud ko ordinary mat samjhiyoo👀
+
+                Tune mera b day bhi bht special kiya h mere liye tune bht kuch kiya h mere liye thank uh so much bhen😭😭💗
+                Aur ek baar𝙃𝘼𝙋𝙋𝙔 𝘽𝙄𝙍𝙏𝙃𝘿𝘼𝙔 𝘽𝙀𝙃𝘼𝙉💗✨🥳🩷
+
+                Meri wifeyy ki taraf se bhi..𝙃𝘼𝙋𝙋𝙔 𝘽𝙄𝙍𝙏𝙃𝘿𝘼𝙔🩷🥳
+                `,
+
+                person2: `Yooo tiya
+Kaisi hai i hope acchi hi hogi pichle 3 din se tere se baat nhi hui aur naahi teri reels aayi bahut bore ho rha hai yrr 🥀💔 Aaj ka din mere liye bhi bahut khaas hai👻✌🏻 coz aaj uss insaan ka birthday hai jo sirf meri online friend nahi balki meri dil se maani hui chhoti behen hai🎀 
+HAPPY BIRTHDAY BAHNYUU🎀💗🫂
+bhagwaan kare teri har iccha puri ho tere liye jo sahi ho bhagwaan tujhe vo zaoor de🌟 Tu hamesha pyaar aur kamyaabi se bhari rahe Tu hamesha isi tarah hasti rah muskuraati rah aur har sapna jo tu dekhe woh poora ho✌🏻
+Sach kahun to tu bahut hi pyaari samajhdaar aur achhe dil ki insaan h Teri baatein teri simplicity aur tera nature tujhe sabse alag banata hai😭🌟🤌 mujhe yaad to nhi hai but haa main 24 25 march ko paradise gc me aaya tha aur main aise hi dark emoji 🌚 spam kar rha tha to tune bol arey amavasya start mat karo aur tu kaafi dark jokes bhi maar rhi thi 🌚 tab mene tera nickname darkest didi rakha tha coz age nhi pata thi 🥀
+fir tere se intro wagera hua fir thodi bahut dm me baat hui aur itni jaldi tere se itna accha bond bn gya pata hi nhi chala 😭💗🎀 yk jab tune mujhe apne mulakaat ke 2,2.5 months baad bhaiyuu nickname diya naa bhai 😭 dil se awaaz aayi ki aakhri saas tak tere bhaiyuu hone kaa farz nibhana hai 🫶💗🎀Mujhe bahut khushi hoti hai ki meri zindagi mein tujh jaisi ek chhoti mastikhor aur bahut hi jaada pyaari bahen hai 🎀chahe hum kitni bhi door kyon na ho bond ki asli khoobsurti dil se hoti hai aur tu mere liye hamesha meri chhoti behen (bahnyuu) hi rahegi 🎀💗🌟
+Main dua karta hoon tujhe kabhi kisi bhi chiz  duniya me kisi bhi chiz ki kami naa ho tu hamesha khush rahe hamesha smile karti rahe cozz wohi teri sabse khoobsurat chiz hai💎 Agar kabhi zindagi mein koi dikkat aaye to yaad rakhna tera ek bada bhai hamesha tere saath khada rahega 🌟💗🎀
+Janamdin ki bahut bahut badhai meri bahnyuu 🎀💗 Bhagwan tujhe lambi umar de tujhe meri bhi umar laga de achhi sehat dher saari khushiyan aur zindagi ki har kamyaabi tere kadam chume ✌🏻 Hamesha khush rehna haste rehna aur apni isi pyari si muskaan se duniya ko roshan karti rehna Once again, HAPPIEST BIRTHDAY MERI PYAARI BAHNYUU LOVE YOU SO MUCCHHHH!!! 🌟💎🎀💗✌🏻
+`,
+
+                person3: `Happy Birthdayyy Tiyaa!! 🎉🤍
+Sach batau, jab hum pehli baar mile the na, tab mujhe laga bhi nahi tha ki hum itne achhe friends ban jayenge. Shuru shuru mein to mujhe tum itni pasand bhi nahi thi 😭, but dheere dheere baat karte karte pata hi nahi chala kab hum itne achhe friends ban gaye.
+It's honestly crazy ki ek online friendship itni real aur special feel ho sakti hai. Thank you for all the random chats, hasi-mazaak, bakchodi aur har memory. ❤️
+Bas aise hi hamesha khush rehna, apne dreams achieve karna aur kabhi change mat hona. I hope hamari dosti hamesha aisi hi rahe.
+Love you yaar! Happy Birthday once again, Tiya! 🥹🎂🤍`,
+
+                person4: `Happy Birthday Tiya!🥳🤍🎂
+
+It's funny how we met so randomly in the Paradise group👀🤌✨✨ And I didn't even know you. 😭 I don't remember who sent the follow request first 😿but I do remember that you were the one who texted me first 👀🤌✨✨✨✨and you even sent me your picture 🩷🩷
+
+Honestly, my first impression of you was that you were such a sweet person💖💖👀. And now, when I look back🤔 I feel like you've changed a lot as a person 🙆
+
+We may not have talked a lot 🥀 but even then, you were always there to support me whenever I needed it 🥺🥺🥺That really meant a lot to me and I'll always be grateful for it 🤧🤧Thank you. 🤍
+
+Wishing you endless happiness ☺️ good health, success and lots of beautiful memories👀🤌✨. Stay happy, keep smiling, and have the most amazing birthday! 🎉✨`,
+
+                person5: `Happy Birthday Tiyaaaaaa 🥳🥳.....
+
+Mayyy God bless you withhh lots of love and peace. 🤍✨ Aaj ka din khaas to hai, isliye nahi ki aaj Wednesday hai aur 22nd of July hai  but ye hai khaas kyuki aaj ke din hii merii ye pyaari si behan existence me aayi. 🥹🫶
+
+Waise to hamare milne ki probablity bohot jyada hii kam thi.  Agar ye insta naa hota  to hum bas ek dusre kaa naam hi jaante joki hamara nahi par sirf ek naming word hota. 🤝
+
+Haha haa bakwas to bohot pelta hu mai 🤡🤣, par like ek chiz hai jo mai literally kehna chahta hu ❤️ aur wo ye hai kii tu sirf meri behan nahi usse bhi badh kar hai. 🫂
+
+Tu meri bakchodi vibe ko full competition deti hai 🤣🤝 aur humari bakchodiyan to next level hoti hain.  Kabhi bhi karne ke baad regret nahi feel hota kyuki maine crime akele thodi kiya hai. 
+
+Hume ek dusre ko jaante hue 7-8 mahine ho gaye. ️ Haa ab mai proudly keh sakta huu ki ek jhaatu si gc named paradise  gave me a new family 🫂❤️ jiski one of the best member tu hai. 
+
+Teri baat hi alag hai, main character vibes to kut kut ke bhari hain.  The way tu bakchodi karti hai , tu sabke opinions ko appreciate karti hai 🫶 aur sabko apna maanti hai 🤍 makes you the best. ✨ Tu meri behan dost to thi hii  par fir tu meri game partner bhi ban gayi , raat ke 1.30 bje tak Roblox khel rakkha hai saath me  thatsss crazyyyy you know.  Jab bhi mai lonely feel karta huu 🥹 apni madam jii ko miss kar raha hota hu ❤️, you are always there to support me 🫂 and give me reassurance kiii mai akela nahi hu. 🤍✨ So thank you thank you so much  meri jindagi me aane ke liye  aur mujhe apna banane ke liyee. 🫂
+
+Happy Birthday 🥳 and I give you blessing kii tujhe wo sab mile jo tu chahti hai , duniya kii saari khushiyan mile meri cutee siii choti behan kooo. 🥹 (Guru jo huu aashirwad dena to banta hi haiiii.  Tathastuuuuuu 🪄✨)
+
+Happy Birthday Tiyaaaa 🥳
+
+Meri madammm jiiiii ke taraf se bhiiiii... Happy Birthday💖💖💓
+`,
+
+                person6: `Hello Tiya,
+Kaisi hoo meri lodii jii merii bitchh?😭
+Happiest birthday meri baby💌
+I'm missing u alooottttt...Roz aapke DMs khali dekhkrr rona aajata h😭🫠🥀..Maybe I'm so used to your presence and maybe it defines your sole importance😭🤌🏻
+As for our journey,bas mai kya hee btau kitti special rhi h🫠❤️
+Jab mai pehli baar gc me aayi,tab mujhe lga tha ki kahinn sab bhot rude na ho ya shayad kahin meri inse bane hee naa..aurr online friends parr vaise bhi kon hee vishwas krta h😭😭😂..Firr jab tu aayi..Tune apni age btayi,I thought finally koi meri age ka mila..Firr pta chla tab tu 7th me thi,mujhe lga ki iss choti bacchi se kya hee bonding ho payegi😭😭👻..But obviously destiny nee hame galat prove kiya,and I'm so glad it did🩷🌟..I still remember,Mai 14 march ko gc me aayi,uske agle din hee tune mujhe req bheji,yaani 15 march ko hamari DMs me baatien hui..The day we met🫠💌..I still remember,tera first ques meri age ko hee lekr tha,
+And i thought kisi ke andar itti chull kaise hee ho skti h😂😂..
+But firr bhot changes hue,maine apna voo wla account delete kiya,But usse phle tune mujhko bio me mention kiya😭😭❤️..firr ye account bhi bnaya,but one thing remained constant,our bond🫠🤍(ik ye dil vidhwa lgta h but it's my fav😾)
+Maine tere saath bhot baatien share ki,kuch aisi jo mai shayad kabhi kisi ko na batau,tune bhi kii..We saw the worst and the best phases of each other's life🫠🤌🏻..But even after that,i was convinced ki mai apna number toh kabhi nii dungi..But maybe we were meant to be✨️💓..and with that,I gave my number to you,the same way I gave my heart😼💋💗..
+Aurr firr toh kaha kaha ke calls kaha kaha ki baatien,tho I had never been the kind of person who spent that much time talking to someone on calls😭😭
+I guess you were the biggest change that could happen to me,the best one tho,obv🫠💟
+There are so many nicknames we've given each other,atp I'm confused tujhe kis naam se bulau😭😭😂..
+But obv lawdi bhadwi duo constant rahega😭😭👻..
+You've a heart made of gold meri betu💛 and I hope you get the best things of life..
+I wonder jis din ham mile uss din universe ne kya socha hoga
+Probably yahi ki finally 2 souls complete hogyi🩷
+I'm so thankful teri aur meri meet hui..
+Tune bhot aisi cheezien jheli h ya dekhi h,jo tu deserve ni krti,Ik i cannot remove them,But i'll make sure i create so many memories with you,that you forget them,After all you only deserve the best things of this universe meri cutu🌟❤️
+You're brighter than the sun that shines,with that light in you..You've eyes that sparkle with the living moment..Lips that hold mischief and yet I'm a slave of them🫠🛐..And when you lipsync to songs,smiling in the process..haaye😭😭🙏..I won't be able to hande this much beauty lodii jii💛🤌🏻..Aap toh noor ho,kohinoor ho,aap chaand hoo..aap meri ho💋
+TO MY ONE AND ONLY LODI JI,
+MY BEST FRIENDDDD
+HAPPIEST BIRTHDAY BABY💌💋
+I just hope you're safe..take care meri bitch🫠
+
+-Rab ne baniyan jodiyaan,onhe tere mere mail likhayen...
+Eho hee dua mai sada mangda
+Tera hath fadd zindagi bitawangi
+Tera hath fadd zindagi bitawangi💌🫠
+-Yours only
+Tivishaa❤️`
+
+            };
+
+            setTimeout(() => {
+
+                document.getElementById("letterTitle").innerHTML =
+
+                    "A Letter For You 💌";
+
+                document.getElementById("letterText").innerHTML =
+
+                    messages[currentPerson];
+
+            }, 700);
+
+        }
+
+
+
+        // =================================================
+        // PROMISE ROOM
+        // =================================================
+
+        function openPromise(number) {
+
+            const gifts = document.querySelectorAll(".promise-gift");
+
+            const selectedGift = gifts[number - 1];
+
+            selectedGift.classList.add("opening");
+
+            setTimeout(() => {
+
+                selectedGift.classList.remove("opening");
+
+                const promises = {
+
+                    1: "🌸 We promise to always keep the beautiful memories alive.",
+
+                    2: "💖 We promise to always value the bond we created.",
+
+                    3: "✨ We promise to keep spreading smiles and happiness.",
+
+                    4: "🫶 We promise that this connection will always remain special.",
+
+                    5: "🎀 We promise to always be grateful for this beautiful journey."
+
+                };
+
+                const card = document.getElementById("promiseCard");
+
+                card.innerHTML = promises[number];
+
+                card.style.animation = "none";
+
+                setTimeout(() => {
+
+                    card.style.animation = "promiseShow .5s ease";
+
+                }, 10);
+
+            }, 700);
+
+        }
+
+
+
+        // =================================================
+        // PETALS
+        // =================================================
+
+        function createPetals() {
+
+            setInterval(() => {
+
+                const petal = document.createElement("div");
+
+                petal.className = "petal";
+
+                petal.innerHTML = "🌸";
+
+                petal.style.left = Math.random() * 100 + "%";
+
+                petal.style.animationDuration =
+
+                    (6 + Math.random() * 6) + "s";
+
+                petal.style.fontSize =
+
+                    (18 + Math.random() * 12) + "px";
+
+                document.body.appendChild(petal);
+
+                setTimeout(() => {
+
+                    petal.remove();
+
+                }, 12000);
+
+            }, 350);
+
+        }
+
+        createPetals();
+
+        // =================================================
+        // FIREWORKS
+        // =================================================
+
+        function createFirework() {
+
+            const box = document.getElementById("fireworks");
+
+            for (let i = 0; i < 25; i++) {
+
+                const spark = document.createElement("div");
+
+                spark.className = "firework";
+
+                spark.style.left = Math.random() * 100 + "%";
+
+                spark.style.top = Math.random() * 100 + "%";
+
+                spark.style.background =
+                    `hsl(${Math.random()*360},100%,70%)`;
+
+                spark.style.animationDuration =
+                    (.8 + Math.random() * .8) + "s";
+
+                box.appendChild(spark);
+
+                setTimeout(() => {
+
+                    spark.remove();
+
+                }, 1500);
+
+            }
+
+        }
+
+
+
+        // =================================================
+        // CONFETTI
+        // =================================================
+
+        function createConfetti() {
+
+            const box = document.getElementById("confetti");
+
+            const colors = [
+                "#ff5fa2",
+                "#ffd93d",
+                "#6bcBef",
+                "#7bed9f",
+                "#ffffff",
+                "#ff9ff3"
+            ];
+
+            for (let i = 0; i < 80; i++) {
+
+                const piece = document.createElement("div");
+
+                piece.className = "confetti";
+
+                piece.style.left = Math.random() * 100 + "%";
+
+                piece.style.background =
+                    colors[Math.floor(Math.random() * colors.length)];
+
+                piece.style.animationDuration =
+                    (3 + Math.random() * 3) + "s";
+
+                piece.style.animationDelay =
+                    Math.random() * 1.5 + "s";
+
+                box.appendChild(piece);
+
+                setTimeout(() => {
+
+                    piece.remove();
+
+                }, 7000);
+
+            }
+
+        }
+
+
+
+        // =================================================
+        // FINALE
+        // =================================================
+
+        const originalNextSection = nextSection;
+
+        nextSection = function(id) {
+
+            originalNextSection(id);
+
+            if (id === "finalePage") {
+
+                createFirework();
+
+                createConfetti();
+
+            }
+
+        };
+
+
+
+        // =================================================
+        // REPLAY
+        // =================================================
+
+        function restartJourney() {
+
+            nextSection("birthday");
+
+            index = 0;
+
+            typeWriter();
+
+        }
+
+
+
+        // =================================================
+        // ENTER KEY SUPPORT
+        // =================================================
+
+        const passwordInput = document.getElementById("password");
+
+        if (passwordInput) {
+
+            passwordInput.addEventListener("keypress", function(e) {
+
+                if (e.key === "Enter") {
+
+                    checkPassword();
+
+                }
+
+            });
+
+        }
+
+
+
+        // =================================================
+        // PREVENT DOUBLE MUSIC START
+        // =================================================
+
+        document.addEventListener("click", () => {
+
+            if (music.paused) {
+
+                music.play().catch(() => {});
+
+            }
+
+        }, {
+            once: true
+        });
+
+
+
+        // =================================================
+        // INITIAL STATE
+        // =================================================
+
+        // Hide every page first
+        document.querySelectorAll(".page").forEach(page => {
+
+            page.classList.add("hide");
+
+        });
+
+        // Show only login page
+        document.getElementById("login").classList.remove("hide");
+
+
+
+        // =================================================
+        // DEBUG MESSAGE
+        // =================================================
+
+        console.log("Birthday Website Loaded Successfully ❤️");
+    </script>
+
+</body>
+
+</html>

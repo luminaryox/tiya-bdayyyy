@@ -1489,6 +1489,8 @@
 
         const music = document.getElementById("bgMusic");
 
+        music.volume = 0.35; // Default background music volume
+
         const birthdayText = document.getElementById("birthdayText");
 
         let originalMessage = birthdayText.innerHTML;
@@ -1501,17 +1503,51 @@
         // NAVIGATION
         // =================================================
 
-        function nextSection(id) {
+        function nextSection(id){
 
-            document.querySelectorAll(".page").forEach(page => {
+    // Hide all pages
+    document.querySelectorAll(".page").forEach(page=>{
+        page.classList.add("hide");
+    });
 
-                page.classList.add("hide");
+    // Show selected page
+    document.getElementById(id).classList.remove("hide");
 
-            });
+    // Start music after first interaction
+    if(music.paused){
+        music.play().catch(()=>{});
+    }
 
-            document.getElementById(id).classList.remove("hide");
+    // Fade music
+    clearInterval(window.musicFade);
+
+    let targetVolume = (id === "recordings") ? 0 : 0.35;
+
+    window.musicFade = setInterval(()=>{
+
+        if(Math.abs(music.volume - targetVolume) < 0.02){
+
+            music.volume = targetVolume;
+
+            clearInterval(window.musicFade);
+
+            return;
 
         }
+
+        if(music.volume > targetVolume){
+
+            music.volume -= 0.02;
+
+        }else{
+
+            music.volume += 0.02;
+
+        }
+
+    },40);
+
+}
 
         function backToFamily() {
 
